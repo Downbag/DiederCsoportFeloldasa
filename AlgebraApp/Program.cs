@@ -119,12 +119,15 @@ namespace AlgebraApp
             while (ered != maxered)
             {
                 ered= ReszFeloldas(x.JelenlegiElem(),y.JelenlegiElem(),z.JelenlegiElem(),0);
+                //Console.WriteLine($"z elemszám: {z.poziciok.Count}\tz={z}");
                 if (!z.KovetkezoElem())
                 {
-                    z=new F2D2nCsoportElem();
+                    //Console.WriteLine($"y={y}");
+                    z =new F2D2nCsoportElem();
                     if (!y.KovetkezoElem())
                     {
-                        y=new F2D2nCsoportElem();
+                        //Console.WriteLine($"x={x}");
+                        y =new F2D2nCsoportElem();
                         if (!x.KovetkezoElem())
                         {
                             Console.WriteLine("Nem elérhető a maximális várható eredmény");

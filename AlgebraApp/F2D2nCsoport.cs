@@ -8,7 +8,7 @@ namespace AlgebraApp
 {
     internal class F2D2nCsoportElem
     {
-        List<int> poziciok=new List<int>();
+        public List<int> poziciok=new List<int>();
 
         public F2D2nCsoportElem()
         {
@@ -54,7 +54,7 @@ namespace AlgebraApp
                     {
                         poziciok[j] = j;
                     }
-                    if(poziciok.Count>DiederElem.CSOPORT_RENDJE)
+                    if (poziciok.Count > DiederElem.CSOPORT_RENDJE) break;
                     return true;
                 }
                 else
@@ -64,8 +64,9 @@ namespace AlgebraApp
                     bool problema_fent_all=true;
                     while (problema_fent_all)
                     {
-                        if(poziciok.Contains(j)) j++;
-                        else problema_fent_all=false;
+                        if (poziciok.Contains(j)) j++;
+                        else if (j > DiederElem.CSOPORT_RENDJE) break;
+                        else problema_fent_all = false;
                     }
                     poziciok[i] = j;
                 }
@@ -77,6 +78,11 @@ namespace AlgebraApp
         {
             bool a = Lepes();
             return a;
+        }
+
+        public override string ToString()
+        {
+            return JelenlegiElem().ToString();
         }
     }
 }
