@@ -21,6 +21,7 @@ namespace AlgebraApp
             foreach(DiederElem elem in elemek)
             {
                 
+
                 reszhalmaz.Add(elem);
             }
         }
@@ -66,6 +67,7 @@ namespace AlgebraApp
         //    }
         //    return temp;
         //}
+        
 
         public F2DiederElem Inverz
         {
